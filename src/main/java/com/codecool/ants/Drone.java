@@ -1,17 +1,18 @@
 package com.codecool.ants;
 
 import com.codecool.ants.geometry.Direction;
+import com.codecool.ants.geometry.Position;
 
 import java.awt.*;
 
 public class Drone extends Ant{
 
-    private final Ant queen;
+    private final Queen queen;
 
     private boolean isMatting = false;
 
-    public Drone(int speed, int x, int y, Ant queen) {
-        super(speed, Direction.STILL, x, y,AntType.DRONE,32, Color.CYAN);
+    public Drone(int speed, Position position, Queen queen) {
+        super(speed, Direction.STILL, position,AntType.DRONE,32, Color.CYAN);
         this.queen = queen;
     }
 

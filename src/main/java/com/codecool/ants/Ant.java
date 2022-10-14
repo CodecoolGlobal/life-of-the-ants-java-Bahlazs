@@ -22,9 +22,9 @@ public abstract class Ant extends Rectangle{
     protected long turnTime;
 
 
-    public Ant(double speed, Direction direction, int x, int y, AntType antType, int size, Color color) {
-        super(x,y,size,size);
-        position = new Position(x, y);
+    public Ant(double speed, Direction direction, Position position, AntType antType, int size, Color color) {
+        super((int)position.getX(),(int)position.getY(),size,size);
+        this.position = position;
         this.speed = speed;
         this.direction = direction;
         startTime = System.nanoTime();
@@ -41,7 +41,6 @@ public abstract class Ant extends Rectangle{
         }
     }
 
-    public void changeMood() {}
     public void movement() {};
 
     protected boolean canTurn(long turnTime) {
@@ -54,7 +53,6 @@ public abstract class Ant extends Rectangle{
         return canTurn;
     }
 
-    public void matting (Drone drone) {}
 
     protected Direction getRandomDirection() {
         Direction[] directions = {Direction.NORTH,Direction.WEST,Direction.SOUTH,Direction.EAST};

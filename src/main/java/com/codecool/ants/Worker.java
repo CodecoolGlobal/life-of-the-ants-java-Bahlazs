@@ -1,6 +1,7 @@
 package com.codecool.ants;
 
 import com.codecool.ants.geometry.Direction;
+import com.codecool.ants.geometry.Position;
 
 import java.awt.*;
 import java.util.Random;
@@ -8,8 +9,8 @@ import java.util.Random;
 public class Worker extends Ant{
 
 
-    public Worker(double speed, int x, int y) {
-        super(speed, Direction.WEST, x, y,AntType.WORKER, 16, Color.WHITE);
+    public Worker(double speed, Position position) {
+        super(speed, Direction.WEST, position ,AntType.WORKER, 16, Color.WHITE);
     }
 
     @Override

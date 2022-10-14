@@ -1,14 +1,15 @@
 package com.codecool.ants;
 
 import com.codecool.ants.geometry.Direction;
+import com.codecool.ants.geometry.Position;
 
 import java.awt.*;
 
 public class Soldier extends Ant{
 
 
-    public Soldier(double speed, int x, int y) {
-        super(speed, Direction.NORTH, x, y,AntType.SOLIDER, 48, Color.GREEN);
+    public Soldier(double speed, Position position) {
+        super(speed, Direction.NORTH, position,AntType.SOLIDER, 48, Color.GREEN);
     }
 
     @Override
